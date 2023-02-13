@@ -18,15 +18,18 @@ public class App {
 
         Socket socket = server.accept();
         System.out.println("Client connected to " + socket.getLocalSocketAddress().toString());
- 
+
         NetworkIO netIO = new NetworkIO(socket);
 
         String msgRecv = "";
+
+        // below line is specific to this program
         MathFn mathfn = new MathFn();
 
         while(!msgRecv.equalsIgnoreCase("quit")) {
             msgRecv = netIO.read();
             
+            // if{} is specific to this program
             if(!msgRecv.equalsIgnoreCase("quit")) {
                 if(msgRecv.toLowerCase().startsWith("add")) {
                     netIO.write("Sum result: " + mathfn.add(msgRecv));

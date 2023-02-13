@@ -2,6 +2,7 @@ package calculator;
 
 import java.util.ArrayList;
 
+// entire class is specific to this program
 public class MathFn {
     public Integer add(String input) {
         ArrayList<Integer> numbers = getNumbersFromString(input);

@@ -22,6 +22,7 @@ public class Client {
         String input = "";
         String serverResponse = "";
 
+        // below 2 lines are specific to this program
         System.out.println("Welcome to basic math calculator!");
         displayMenu();
 
@@ -29,11 +30,13 @@ public class Client {
             System.out.printf("> ");
             input = scanner.nextLine();
             
+            // if{} is specific to this program
             if(input.equalsIgnoreCase("help")) {
                 displayMenu();
                 continue;
             }
 
+            // if{} is specific to this program
             if(!input.equalsIgnoreCase("quit")) {
                 String numbers = input;//.replace("add", "").trim();
                 netIO.write(numbers);
